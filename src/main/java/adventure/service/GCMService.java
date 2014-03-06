@@ -4,13 +4,9 @@ import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 
 import java.lang.reflect.InvocationTargetException;
 import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.Date;
 
 import javax.inject.Inject;
 import javax.mail.MessagingException;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -19,11 +15,10 @@ import javax.ws.rs.core.Response;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.jboss.resteasy.spi.validation.ValidateRequest;
 
-import br.gov.frameworkdemoiselle.lifecycle.Startup;
-import br.gov.frameworkdemoiselle.transaction.Transactional;
-import adventure.entity.Event;
 import adventure.entity.GCMRegID;
 import adventure.persistence.GCMRegIDDAO;
+import br.gov.frameworkdemoiselle.lifecycle.Startup;
+import br.gov.frameworkdemoiselle.transaction.Transactional;
 
 @ValidateRequest
 @Path("/api/gcm")
@@ -68,7 +63,7 @@ public class GCMService {
 		if (dao.findAll().isEmpty()) {
 			
 			GCMRegID gcmRegID = new GCMRegID();
-			gcmRegID.setRegId("APA91bHeSz2o5XsC8v8dXJkRlYEOBpeJfbVT3CwyiNyC5CB6rNRptAqpvSrkU1FLnOZA994jBg_NERaGGyJYu76myKB19t1xK836oyF7TbU_9i6hpUQahZzbyoYtsTHBHBnDoGWNG3PtbOP0T3okk2za1WqcURCllI8s_XLo623COSvG8g_O6E4");	
+			gcmRegID.setRegId("APA91bHFlRHNahzYfzDl31U5g3vg6-R4mhF7AKr7D6xnxGdD4DaniO8T3KFzz6EBwxIfVW5o9DWYnZoJEA0VNahE93T7fj3-Pcc9O29CH1yng9qLFFoVS3KQeiW0s7V_R7_EL3LEhvZbamnO4s9DQHkeGAo8Y0xq-WvhkR1cXZP8MNpNX9EjZ1E");	
 			
 			dao.insert(gcmRegID);
 			
