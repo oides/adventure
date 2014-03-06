@@ -9,6 +9,7 @@
 		<class>adventure.entity.Event</class>
 		<class>adventure.entity.Modality</class>
 		<class>adventure.entity.Athlete</class>
+		<class>adventure.entity.GCMRegID</class>
 
 		<properties>
 			<property name="hibernate.show_sql" value="true" />
