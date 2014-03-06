@@ -36,8 +36,6 @@ public class AdventureGCMUtil {
 			MulticastResult multicastResult = sender.send(message, devicesList, 0);
 			sender.send(message, devicesList, 0);
 			
-			System.out.println("Message Result: " + multicastResult.toString());
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
